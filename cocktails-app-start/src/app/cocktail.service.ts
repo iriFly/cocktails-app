@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Cocktail } from './cocktail.model';
 
+
 interface CocktailDbDrink {
   idDrink: string;
   strDrink: string;
@@ -103,6 +104,6 @@ export class CocktailService {
       glass: drink.strGlass,
       imageUrl: drink.strDrinkThumb,
       ingredients,
-    }; 
+    };
   }
 }

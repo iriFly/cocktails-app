@@ -1,3 +1,28 @@
-<p>coctail-details works!</p>
+<div class="card"
+  cds-layout="grid cols@sm:6 cols@md:auto align:horizontal"
+  *ngIf="cocktails$ |async as cocktail">
 
-{{ id }}
+  <div class="card-media-block">
+    <img cds-layout="m:lg" width="80%" [src]="cocktail.imageUrl" />
+  </div>
+
+<section>
+  <div class="card-header">
+    <h3>{{cocktail.name}}</h3>
+  </div>
+
+  <div class="card-block">
+    <h4>Category</h4>
+    <p>{{cocktail.Category}}, {{cocktail.Alcoholic}}</p>
+
+    <h4>Ingredients</h4>
+    <p>{{cocktail.Ingredients.join(', ')}}</p>
+
+    <h4>Instructions</h4>
+    <p>{{cocktail.Instructions}}</p>
+
+  </div>
+
+</section>
+
+</div>

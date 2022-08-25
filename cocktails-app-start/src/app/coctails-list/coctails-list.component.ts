@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Cocktail } from '../cocktail.model';
+import { CocktailService } from '../cocktail.service';
 
 @Component({
   selector: 'app-coctails-list',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coctails-list.component.css']
 })
 export class CoctailsListComponent implements OnInit {
+  cocktails$: Observable<Cocktail[]>;
 
-  constructor() { }
+  constructor(private cocktailService: CocktailService) { }
 
   ngOnInit(): void {
+    this.cocktails$ = this.cocktailService.listByFirstLetter('a');
+
+    // this.cocktails$.subscribe(res => {
+    //   console.log(res);
+
+    // })
   }
 
 }

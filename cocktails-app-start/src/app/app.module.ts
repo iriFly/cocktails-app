@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoctailsListComponent } from './coctails-list/coctails-list.component';
 import { CoctailDetailsComponent } from './coctail-details/coctail-details.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Route[]  = [
 {
@@ -16,7 +18,7 @@ const routes: Route[]  = [
 },
 
 {
-  path: 'coctail-details/:id',
+  path: 'details/:id',
   component: CoctailDetailsComponent
 },
 
@@ -44,7 +46,8 @@ const routes: Route[]  = [
     BrowserModule,
     ClarityModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
