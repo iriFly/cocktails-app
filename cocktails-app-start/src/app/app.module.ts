@@ -10,6 +10,7 @@ import { CoctailDetailsComponent } from './coctail-details/coctail-details.compo
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CocktailDetailsResolver } from 'src/cocktail-details.resolver';
 
 const routes: Route[]  = [
 {
@@ -19,7 +20,10 @@ const routes: Route[]  = [
 
 {
   path: 'details/:id',
-  component: CoctailDetailsComponent
+  component: CoctailDetailsComponent,
+  resolve: {
+    cocktail: CocktailDetailsResolver
+  }
 },
 
 {

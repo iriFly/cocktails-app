@@ -1,6 +1,7 @@
 <div class="card"
   cds-layout="grid cols@sm:6 cols@md:auto align:horizontal"
-  *ngIf="cocktails$ |async as cocktail">
+  *ngIf="cocktail">
+
 
   <div class="card-media-block">
     <img cds-layout="m:lg" width="80%" [src]="cocktail.imageUrl" />
