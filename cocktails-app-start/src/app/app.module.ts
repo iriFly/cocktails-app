@@ -11,6 +11,11 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CocktailDetailsResolver } from 'src/app/resolvers/cocktail-details.resolver';
+import { IngredientListComponent } from './components/ingredient-list/ingredient-list.component';
+import { IngredientDetailsComponent } from './components/ingredient-details/ingredient-details.component';
+import { IngredientDetailsResolver } from './resolvers/ingredient-details.resolver';
+import { AuthGuard } from 'src/auth.guard';
+import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 
 const routes: Route[]  = [
 {
@@ -21,9 +26,30 @@ const routes: Route[]  = [
 {
   path: 'details/:id',
   component: CoctailDetailsComponent,
+  canActivate: [
+    AuthGuard
+  ],
   resolve: {
     cocktail: CocktailDetailsResolver
   }
+},
+
+{
+  path: 'ingredient-list',
+  component: IngredientListComponent
+},
+
+{
+  path: 'ingredient-details/:name',
+  component: IngredientDetailsComponent,
+  resolve: {
+    ingredient: IngredientDetailsResolver
+  }
+},
+
+{
+  path: 'unauthorized',
+  component: UnauthorizedComponent
 },
 
 {
@@ -44,7 +70,8 @@ const routes: Route[]  = [
     AppComponent,
     CoctailsListComponent,
     CoctailDetailsComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
