@@ -54,7 +54,13 @@ const routes: Route[]  = [
 
 {
   path: 'admin',
-  loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+  canLoad: [
+    AuthGuard
+  ],
+  canActivate: [
+    AuthGuard
+  ]
 },
 
 
