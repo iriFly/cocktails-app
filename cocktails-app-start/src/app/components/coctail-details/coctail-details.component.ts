@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Cocktail } from '../cocktail.model';
-import { CocktailService } from '../cocktail.service';
+import { Cocktail } from '../../cocktail.model';
+import { CocktailService } from '../../services/cocktail.service';
 @Component({
   selector: 'app-coctail-details',
   templateUrl: './coctail-details.component.html',

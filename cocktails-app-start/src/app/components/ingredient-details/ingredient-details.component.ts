@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Ingredient } from '../ingredient.model';
+import { Ingredient } from '../../ingredient.model';
 
 @Component({
   selector: 'app-ingredient-details',

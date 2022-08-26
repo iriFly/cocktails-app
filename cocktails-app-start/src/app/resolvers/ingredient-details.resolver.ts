@@ -5,8 +5,8 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { CocktailService } from './cocktail.service';
-import { Ingredient } from './ingredient.model';
+import { CocktailService } from '../services/cocktail.service';
+import { Ingredient } from '../ingredient.model';
 
 @Injectable({
   providedIn: 'root'

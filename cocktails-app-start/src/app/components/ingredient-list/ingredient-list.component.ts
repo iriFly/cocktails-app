@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CocktailService } from '../cocktail.service';
+import { CocktailService } from '../../services/cocktail.service';
 
 @Component({
   selector: 'app-ingredient-list',

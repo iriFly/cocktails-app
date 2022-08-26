@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Cocktail } from './cocktail.model';
-import { Ingredient } from './ingredient.model';
-import { IngredientDetailsComponent } from './ingredient-details/ingredient-details.component';
+import { Cocktail } from '../cocktail.model';
+import { Ingredient } from '../ingredient.model';
+import { IngredientDetailsComponent } from '../components/ingredient-details/ingredient-details.component';
 
 
 interface CocktailDbDrink {

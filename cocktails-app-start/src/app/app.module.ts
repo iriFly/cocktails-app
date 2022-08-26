@@ -5,12 +5,12 @@ import { RouterModule, Route } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoctailsListComponent } from './coctails-list/coctails-list.component';
-import { CoctailDetailsComponent } from './coctail-details/coctail-details.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { CoctailsListComponent } from './components/coctails-list/coctails-list.component';
+import { CoctailDetailsComponent } from './components/coctail-details/coctail-details.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CocktailDetailsResolver } from 'src/cocktail-details.resolver';
+import { CocktailDetailsResolver } from 'src/app/resolvers/cocktail-details.resolver';
 
 const routes: Route[]  = [
 {

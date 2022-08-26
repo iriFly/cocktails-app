@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Cocktail } from '../cocktail.model';
-import { CocktailService } from '../cocktail.service';
+import { Cocktail } from '../../cocktail.model';
+import { CocktailService } from '../../services/cocktail.service';
 
 @Component({
   selector: 'app-coctails-list',
