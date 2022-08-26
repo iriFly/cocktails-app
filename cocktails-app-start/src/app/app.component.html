@@ -8,9 +8,11 @@
     <div class="header-nav">
       <a [routerLink]="['list']" class="nav-link nav-text">Home</a>
       <a [routerLink]="['ingredient-list']" class="nav-link nav-text">Ingredient List</a>
+      <a routerLink="admin" class="nav-link nav-text">Admin panel</a>
 
       <a (click)="logIn()" *ngIf="!loggedIn" class="nav-link nav-text">Log In</a>
       <a (click)="logOut()" *ngIf="loggedIn" class="nav-link nav-text" >Log Out</a>
+
 
     </div>
   </header>
